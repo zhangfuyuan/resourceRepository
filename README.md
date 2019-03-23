@@ -1,2 +1,2 @@
 # resourceRepository
-资源存储库
+与开发相关的资源存储库
