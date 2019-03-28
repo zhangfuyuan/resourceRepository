@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery点击按钮弹出层可拖动代码</title>
+<style>
+* { margin: 0; padding: 0; }
+body { font-family: "Microsoft Yahei"; font-size: 16px; }
+
+#mask_shadow {
+  display: none;
+  opacity: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+}
+#popup {
+  display: none;
+  opacity: 0; 
+  position: absolute;
+  z-index: 2;
+  top: 150px;
+  width: 600px;
+  height: 190px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+#popup .title {
+  position: relative;
+  width: 100%;
+  height: 55px;
+  background-color: #5bc0de;
+  cursor: move;
+}
+#popup .title p {
+  padding-left: 14px;
+  line-height: 55px;
+  color: #fff;
+}
+#popup .title span {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  color: #000;
+  opacity: .2;
+  font-size: 21px;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid #333;
+}
+#popup .title span:hover {
+  opacity: .8;
+}
+#popup .cont { width: 100%; height: 135px; background-color: #EDEDED;    }
+#btn1 {
+  margin: 30px;
+}
+</style>
+</head>
+<body style=" height: 2000px; ">
+<script src="/demos/googlegg.js"></script>
+<center>
+<input type="button" value="点击弹出框" id="btn1">
+</center>
+<div id="popup">
+<div class="title">
+  <p data-title="Popup Text"></p>
+  <span>x</span>
+</div>
+<div class="cont"></div>
+</div>
+<div id="mask_shadow"></div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/popup.js"></script>
+<script>
+$(function () {
+
+  /**
+	  ifDrag: 是否拖拽
+	  dragLimit: 拖拽限制范围
+   */
+  $('#popup').popup({ifDrag: true, dragLimit: true});
+  
+});
+</script>
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p>
+<p>来源：<a href="http://www.lanrenzhijia.com/" target="_blank">懒人素材</a></p>
+</div>
+</body>
+</html>
