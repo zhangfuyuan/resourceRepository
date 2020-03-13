@@ -1,0 +1,54 @@
+.flex-h,
+.flex-hb,
+.flex-h-vc,
+.flex-hc-vc,
+.flex-hb-vc {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-v,
+.flex-vc,
+.flex-vc-hc,
+.flex-vb-hc {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.flex-hb,
+.flex-hb-vc,
+.flex-vb-hc {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.flex-vc,
+.flex-vc-hc,
+.flex-hc-vc {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.flex-h-vc,
+.flex-hc-vc,
+.flex-hb-vc,
+.flex-vb-hc,
+.flex-vc-hc {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
